@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:id="@+id/romanblack_fanwall_messageitem_root_root">
+    <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:orientation="vertical"
+            android:background="@drawable/fanwall_msg_background"
+            android:id="@+id/romanblack_fanwall_comments_root"
+            android:layout_marginLeft="15dp" android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp">
+
+
+        <RelativeLayout android:layout_height="60dp"
+                        android:layout_width="fill_parent"
+                        android:orientation="horizontal" android:gravity="center_vertical">
+
+            <com.ibuildapp.romanblack.FanWallPlugin.view.RoundedImageView
+                    android:id="@+id/romanblack_fanwall_messageitem_avatar"
+                    android:layout_height="40dp"
+                    android:layout_width="40dp"
+                    android:src="@drawable/fanwall_avatar_placeholder" android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+            <TextView android:id="@+id/romanblack_fanwall_messageitem_name"
+                      android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:textSize="16dp"
+                      android:textStyle="bold" android:singleLine="true" android:text="John Smith"
+                      android:textColor="@color/black_90_trans"
+                      android:layout_toRightOf="@+id/romanblack_fanwall_messageitem_avatar"
+                    />
+
+            <TextView android:id="@+id/romanblack_fanwall_messageitem_date"
+                      android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:lines="1" android:text="5 hours ago"
+                      android:layout_toRightOf="@+id/romanblack_fanwall_messageitem_avatar"
+                      android:layout_below="@+id/romanblack_fanwall_messageitem_name" android:textSize="14dp"
+                      android:textColor="@color/black_50_trans"/>
+
+        </RelativeLayout>
+
+        <LinearLayout android:layout_height="wrap_content"
+                      android:layout_width="fill_parent"
+                      android:orientation="vertical"
+                      android:gravity="center">
+
+            <TextView android:id="@+id/romanblack_fanwall_messageitem_text"
+                      android:layout_height="wrap_content"
+                      android:layout_width="fill_parent"
+                      android:gravity="left"
+                      android:textSize="17dp"
+                      android:textColor="@color/black_80_trans"
+                      android:text="The StaggeredGridView was developed due to requirements for the Etsy "
+                      android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="5dp"
+                      android:layout_marginBottom="5dp"/>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="170dp" android:gravity="center_horizontal"
+                    android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp" android:background="@drawable/fanwall_msg_shadow"
+                    android:id="@+id/romanblack_fanwall_messageitem_msgimage_holder"
+                    android:visibility="visible">
+                <ImageView android:id="@+id/romanblack_fanwall_messageitem_msgimage"
+                           android:layout_height="fill_parent"
+                           android:layout_width="fill_parent"
+                           android:scaleType="centerCrop" android:layout_marginLeft="7dp"
+                           android:layout_marginTop="6dp" android:layout_marginRight="7dp"
+                           android:layout_marginBottom="10dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/black_10_trans">
+        </LinearLayout>
+        <LinearLayout android:id="@+id/romanblack_fanwall_comments_counter_layout"
+                      android:layout_height="38dp"
+                      android:layout_width="fill_parent"
+                      android:orientation="horizontal"
+                      android:gravity="center">
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:layout_weight="1" android:gravity="center">
+                <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/fanwall_comments_icon"/>
+                <TextView android:id="@+id/romanblack_fanwall_messageitem_commentscount"
+                          android:layout_height="wrap_content"
+                          android:layout_width="wrap_content"
+                          android:text="10" android:textColor="@color/text_gray" android:textSize="15dp"
+                          android:layout_marginLeft="4dp"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:layout_weight="1" android:gravity="center"
+                    android:id="@+id/romanblack_fanwall_like_holder">
+                <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:id="@+id/romanblack_fanwall_like_img" android:layout_gravity="center"
+                        android:src="@drawable/fanwall_like_off" android:cropToPadding="false"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8"
+                        android:id="@+id/romanblack_fanwall_messageitem_likecount" android:textSize="13dp" android:layout_marginLeft="4dp"
+                        android:textColor="@color/text_gray"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:layout_weight="1" android:gravity="center"
+                    android:id="@+id/romanblack_fanwall_sharing_holder">
+                <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/fanwall_more"
+                        android:id="@+id/romanblack_fanwall_messageitem_sharing_img"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8"
+                        android:visibility="gone"
+                        android:id="@+id/romanblack_fanwall_messageitem_sharingcount" android:textSize="13dp" android:layout_marginLeft="4dp"
+                        android:textColor="@color/text_gray"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp" android:layout_below="@+id/romanblack_fanwall_comments_root"
+            android:id="@+id/romanblack_fanwall_last_layout">
+    </LinearLayout>
+
+
+</RelativeLayout>
+

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:orientation="vertical"
+             android:background="#ffffff" android:longClickable="false" android:id="@+id/fanwall_messagdetails_root">
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:id="@+id/fanwall_messagdetails_root_transparant">
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/fanwall_messagdetails_pulltorefresh"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" android:gravity="center_vertical"
+                android:layout_gravity="bottom"
+                android:baselineAligned="false" android:background="#F8F8F8"
+                android:id="@+id/romanblack_fanwall_main_bottom_bar">
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" android:gravity="center_vertical">
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="50dp"
+                        android:layout_height="fill_parent" android:gravity="center"
+                        android:id="@+id/romanblack_fanwall_open_bottom">
+                    <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/fanwall_hamburger"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            />
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/fanwall_white_rounded_border_grey"
+                        android:layout_weight="1" android:gravity="center" android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp">
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" android:gravity="center_vertical"
+                            android:layout_marginRight="10dp" android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone" android:id="@+id/fanwall_image_holder">
+                        <RelativeLayout
+                                android:orientation="vertical"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" android:gravity="center_vertical">
+                            <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:id="@+id/fanwall_user_image"
+                                    android:layout_gravity="center_vertical" android:layout_marginTop="3dp"
+                                    />
+                            <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:id="@+id/fanwall_close_image"
+                                    android:layout_toRightOf="@+id/fanwall_user_image"
+                                    android:layout_marginLeft="-15dp"
+                                    android:src="@drawable/fanwall_close_image" android:layout_marginTop="-3dp"/>
+                        </RelativeLayout>
+                        <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="1px" android:background="#D6D6D6" android:layout_marginTop="3dp">
+                        </LinearLayout>
+                    </LinearLayout>
+                    <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="false"
+                            android:id="@+id/romanblack_fanwall_edit_msg"
+                            android:layout_weight="1" android:maxLines="4"
+                            android:minHeight="28dp" android:inputType="textVisiblePassword|textMultiLine"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:textColor="#000000"
+                            android:textSize="14dp" android:autoText="false" android:background="@null"
+                            android:layout_marginLeft="5dp" android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp" android:layout_marginTop="5dp" android:visibility="visible"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="50dp"
+                        android:layout_height="fill_parent" android:gravity="center"
+                        android:id="@+id/romanblack_fanwall_send_post">
+                    <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/fanwall_send_post"
+                            android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+                            />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px" android:background="@color/black_10_trans">
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="38dp" android:id="@+id/fanwall_chooser_holder"
+                    android:visibility="gone" android:gravity="center_vertical">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/romanblack_fanwall_make_photo" android:gravity="center"
+                        android:layout_weight="1">
+                    <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp" android:layout_marginRight="12dp"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/fanwall_pick_photo" />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/romanblack_fanwall_gallery" android:gravity="center" android:layout_weight="1">
+                    <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp" android:layout_marginRight="12dp"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/fanwall_pick_gallery" />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center" android:layout_weight="1">
+                    <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/gps_checkbox_selector"
+                            android:id="@+id/romanblack_fanwall_enable_gps_checkbox"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!--
+    <com.ibuildapp.romanblack.FanWallPlugin.view.MyScrollView
+        android:id="@+id/romanblack_fanwall_message_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+
+
+            <LinearLayout android:id="@+id/romanblack_fanwall_message_nocommets_layout"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/fanwall_comments_there_are_no_comments"
+                          android:textColor="#ffffff"
+                          android:textSize="15dp"
+                          android:layout_marginTop="40dp"/>
+
+                <Button android:id="@+id/romanblack_fanwall_message_nocomments_button"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="40dp"
+                        android:text="@string/post_a_reply"
+                        android:textColor="#000000"
+                        android:textSize="17dp"
+                        android:background="@drawable/romanblack_fanwall_btn_add_comment"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/romanblack_fanwall_message_comments"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"/>
+
+        </LinearLayout>
+
+    </com.ibuildapp.romanblack.FanWallPlugin.view.MyScrollView>
+    -->
+
+</FrameLayout>

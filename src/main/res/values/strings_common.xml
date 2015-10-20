@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Common words -->
+    <string name="common_save_upper">Save</string>
+    <string name="common_home_upper">Home</string>
+    <string name="common_cancel_upper">Cancel</string>
+    <string name="common_modify_upper">Modify</string>
+    <string name="common_yes_upper">Yes</string>
+    <string name="common_no_upper">No</string>
+    <string name="common_loading_upper">Loading...</string>
+    <string name="common_registration_upper">Registration...</string>
+    <string name="common_sign_up_upper">Sign Up</string>
+    <string name="common_sign_in_upper">Sign In</string>
+    <string name="common_back">back</string>
+    <string name="common_back_upper">Back</string>
+    <string name="common_send_email_upper">Send Mail</string>
+    <string name="common_email_upper">Email</string>
+    <string name="common_email_upper_colon">Email:</string>
+    <string name="common_password_upper">Password</string>
+    <string name="common_log_in_upper">Login</string>
+    <string name="common_log_in_upper_colon">Login:</string>
+    <string name="common_sharing_first_part">just commented on</string>
+    <string name="common_sharing_second_part">image via</string>
+    <string name="common_sharing_third_part">download the iPhone/Android</string>
+    <string name="common_login_with_facebook_upper">Login with Facebook</string>
+    <string name="common_login_with_twitter_upper">Login with Twitter</string>
+    <string name="common__login_with_ibuildapp_upper">Login with iBuildApp</string>
+    <string name="common_login_with_email_upper">Login with Email</string>
+    <string name="common_emaillogin_use_email_upper">Use your e-mail to login</string>
+    <string name="common_seconds">seconds</string>
+    <string name="common_a_minute_ago">a minute ago</string>
+    <string name="common_minutes">minutes</string>
+    <string name="common_an_hour_ago">an hour ago</string>
+    <string name="common_hours">hours</string>
+    <string name="common_one_day">one day</string>
+    <string name="common_days">days</string>
+    <string name="common_date_just_now">Just now</string>
+    <string name="common_date_yesterday">Yesterday</string>
+    <string name="common_account">account</string>
+    <string name="common_tap_to_enter">Tap to enter</string>
+    <string name="common_done_upper">Done</string>
+    <string name="common_submit_upper">Submit</string>
+    <string name="common_confirm_upper">Confirm</string>
+    <string name="common_address_upper_colon">Address:</string>
+    <string name="common_parking_upper_colon">Parking:</string>
+    <string name="common_add_to_calendar">Add to Calendar</string>
+    <string name="common_get_direction">Get Direction</string>
+    <string name="common_date_upper">Date</string>
+    <string name="common_time_upper">Time</string>
+    <string name="common_specify_upper">Specify</string>
+    <string name="common_firstname_upper">First name</string>
+    <string name="common_lastname_upper">Last name</string>
+    <string name="common_post_upper">Post</string>
+    <string name="common_registration_agreement">By clicking on checkbox you are indicating that you have read and agree th the Terms of Use</string>
+
+    <!-- Common alerts -->
+    <string name="alert_no_internet">Cellular Data is Turned off. Turn on cellular data or use Wi-Fi to access data</string>
+    <string name="alert_cannot_init">Cannot initialize plugin</string>
+    <string name="alert_twitter_auth_error">Twitter authorization failed</string>
+    <string name="alert_facebook_auth_error">Facebook authorization failed</string>
+    <string name="alert_email_auth_error">Email authorization failed</string>
+    <string name="alert_not_logged_in">You are not logged in</string>
+    <string name="alert_invalid_email">Invalid email</string>
+    <string name="alert_gps_not_available">GPS service is not available</string>
+    <string name="alert_gps_initialization">Wait for initialization GPS service</string>
+    <string name="alert_gps_wrong_route">Cannot initialize route</string>
+
+    <string name="alert_registration_email_inuse">This email is in use. Please use another email</string>
+    <string name="alert_registration_fillin_fields">Fill in all the fields</string>
+    <string name="alert_registration_spam">First and Last name match each other. This seems like a spam, please change Last or First name</string>
+    <string name="alert_registration_two_symbols_name">Your name should have at least 2 characters</string>
+    <string name="alert_registration_two_symbols_password">Your password should have at least 2 characters</string>
+    <string name="alert_registration_correct_email">Please enter correct email address</string>
+    <string name="alert_registration_password_dont_match">Passwords don\'t match</string>
+    <string name="alert_registration_error">Registration error</string>
+
+    
+</resources>

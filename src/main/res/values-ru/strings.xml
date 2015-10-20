@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="common_login_with_facebook_upper">Войти через Facebook</string>
+    <string name="common_login_with_twitter_upper">Войти через Twitter</string>
+    <string name="common__login_with_ibuildapp_upper">Войти через iBuildApp</string>
+    <string name="common_login_with_email_upper">Войти с помощью Email</string>
+    <string name="common_cancel_upper">Отмена</string>
+    <string name="common_password_upper">Пароль</string>
+    <string name="common_log_in_upper">Логин</string>
+    <string name="fanwall_log_in_upper">Логин</string>
+    <string name="common_email_upper">Email</string>
+    <string name="common_loading_upper">Загрузка...</string>
+    <string name="common_yes_upper">Да</string>
+    <string name="common_no_upper">Нет</string>
+    <string name="romanblack_fanwall_comments_title">Комментарии</string>
+
+    <string name="alert_no_internet">Мобильный интернет отключен. Включите интернет, либо используйте WiFi</string>
+    <string name="alert_twitter_auth_error">Не удалось войти через Twitter</string>
+    <string name="alert_facebook_auth_error">Не удалось войти через Facebook</string>
+    <string name="alert_email_auth_error">Не удалось войти с помощью Email</string>
+    <string name="alert_invalid_email">Неверный email</string>
+    <string name="alert_registration_email_inuse">Данный email уже используется. Введите другой</string>
+    <string name="alert_cannot_init">Невозможно инициализировать плагин</string>
+
+    <!-- FanWall -->
+    <string name="romanblack_fanwall_camera_upper">Камера</string>
+    <string name="romanblack_fanwall_gallery_upper">Галерея</string>
+    <string name="romanblack_fanwall_from">от</string>
+    <string name="romanblack_fanwall_or">или</string>
+    <string name="or">или</string>
+    <string name="romanblack_fanwall_map_point">автор</string>
+    <string name="romanblack_fanwall_signup_failed">Имя пользователя и пароль не совпадают с нашими данными, попробуйте
+        еще раз
+    </string>
+    <string name="romanblack_fanwall_wrong_auth_pass_login">Неверный формат данных</string>
+
+    <string name="romanblack_fanwall_have_an_account">Уже есть учетная запись</string>
+    <string name="romanblack_fanwall_sign_up">Новая учетная запись</string>
+    <string name="romanblack_fanwall_posted_by">Отправитель:</string>
+
+    <string name="romanblack_twitter_ptr_tap">Нажми чтобы обновить...</string>
+    <string name="romanblack_twitter_ptr_release">Отпусти чтобы обновить...</string>
+    <string name="romanblack_twitter_ptr_pull">Потяни чтобы обновить...</string>
+
+    <string name="romanblack_fanwall_alert_failed_to_login">Неверный логин.</string>
+    <string name="romanblack_fanwall_alert_cannot_init_camera">Невозможно инициализировать камеру.</string>
+    <string name="romanblack_fanwall_alert_take_pic_before_sharing">Сделайте фото.</string>
+    <string name="romanblack_fanwall_alert_no_camera">Ваш телефон не содержит камеру.</string>
+    <string name="romanblack_fanwall_alert_camera_error">Ошибка камеры. Попробуйте снова.</string>
+    <string name="romanblack_fanwall_alert_pic_sent">Ваша фотография отправлена.</string>
+    <string name="romanblack_fanwall_alert_cant_load_comments">Невозможно загрузить комментации.</string>
+    <string name="romanblack_fanwall_alert_cant_view_profile">Невозможно просмотреть данный профиль</string>
+    <string name="romanblack_fanwall_alert_cant_select_image">Изображение не может быть выбрано</string>
+    <string name="romanblack_fanwall_alert_big_text"><![CDATA[Длина текста не должна превышать 150 символов]]></string>
+    <string name="romanblack_fanwall_alert_empty_message">Невозможно отправить пустой комментарий</string>
+
+    <string name="romanblack_fanwall_dialog_save_image">Сохранить изображение?</string>
+    <string name="romanblack_fanwall_gallery">Галерея</string>
+    <string name="directoryplugin_email_found_this">Я нашел это, используя приложение</string>
+    <string name="directoryplugin_email_download_this">Загрузите приложение</string>
+    <string name="directoryplugin_email_android_iphone_app">для iPhone/Android</string>
+    <string name="directoryplugin_email_posted_via">Отправлено через</string>
+
+    <string name="map">Карта</string>
+    <string name="fanwall_photos">Фото</string>
+    <string name="wall">Стена</string>
+    <string name="Click_the_button_below_to_create_one">Нажми кнопку чтобы создать</string>
+    <string name="send_message">Отправить сообщение</string>
+    <string name="sign_up">Зарегистрироваться</string>
+    <string name="common_clear_upper">Очистить</string>
+
+    <string name="enable_gps_msg">GPS приемник выключен. Хотите включить его?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+
+    <string name="login">Войти</string>
+    <string name="TermOfUse">Устанавливая данный флаг вы соглашаетесь с лицензионным соглашением.</string>
+    <string name="TextView">ТекстВью</string>
+    <string name="replies">Ответы</string>
+    <string name="there_are_no_comments">Комментариев пока нет</string>
+    <string name="fanwall_comments_there_are_no_comments">Сообщений пока нет</string>
+    <string name="fanwall_there_are_no_comments">Сообщений пока нет</string>
+
+    <string name="post_your_comment">Отправить комментарий!</string>
+    <string name="post_a_reply">Ответить</string>
+    <string name="fanwall_post_a_reply">Отправить ответ!</string>
+    <string name="there_are_no_messages">Сообщений пока нет</string>
+    <string name="no_messages_yet">Сообщений пока нет</string>
+    <string name="fanwall_map">Карта</string>
+
+    <string name="signup">Зарегистрироваться</string>
+    <string name="profile">Профиль</string>
+    <string name="last_message">Последнее сообщение:</string>
+    <string name="posts">сообщений</string>
+    <string name="comments">комментариев</string>
+    <string name="tap_to_refresh">Нажми чтобы обновить...</string>
+    <string name="remove_photo">Удалить фото</string>
+    <string name="picture">Изображение</string>
+    <string name="home">Домой</string>
+    <string name="common_home_upper">Домой</string>
+    <string name="common_back">назад</string>
+    <string name="common_back_upper">Назад</string>
+    <string name="back">Назад</string>
+    <string name="recent">Последние</string>
+    <string name="nearme">Рядом</string>
+    <string name="cancel">Отмена</string>
+    <string name="fanwall_post">Отправить</string>
+    <string name="clear">Очистить</string>
+    <string name="loading">Загрузка...</string>
+    <string name="fanwall_post_upper">Отправить</string>
+    <string name="fanwall_image_successfully_loaded">Изображение сохранено</string>
+    <string name="fanwall_alert_no_gps">Гелокация отключена. Для определения координат включите геолокацию</string>
+    <string name="fanwall_talks">Стена</string>
+    <string name="fanwall_add_comment">Добавить комментарий</string>
+    <string name="fanwall_alert_wrong_credential">Пожалуйста, заполните поля логин и пароль</string>
+    <string name="directoryplugin_twitter_posted_success">Изображение было опубликовано под Вашей учетной запиcью
+        Twitter
+    </string>
+    <string name="directoryplugin_twitter_posted_error">Изображение не было опубликовано под Вашей учетной запиcью
+        Twitter
+    </string>
+    <string name="directoryplugin_facebook_posted_success">Изображение было опубликовано на Вашей стене Facebook
+    </string>
+    <string name="directoryplugin_facebook_posted_error">Изображение не было опубликовано на Вашей стене Facebook
+    </string>
+    <string name="common_post_upper">Отправить</string>
+
+    <string name="romanblack_twitter_date_seconds">сек</string>
+    <string name="romanblack_twitter_date_minutes">мин</string>
+    <string name="romanblack_twitter_date_hour_ago">ч</string>
+    <string name="romanblack_twitter_date_days">д</string>
+    <string name="twitter_date_format_item">d MMM</string>
+
+
+    <plurals name="numberOfComments">
+        <item quantity="zero">%d комментариев</item>
+        <item quantity="one">%d комментарий</item>
+        <item quantity="few">%d комментария</item>
+        <item quantity="many">%d комментариев</item>
+        <item quantity="other">%d комментария</item>
+    </plurals>
+
+    <plurals name="numberOfMessages">
+        <item quantity="zero">%d сообщнений</item>
+        <item quantity="one">%d сообщение</item>
+        <item quantity="many">%d сообщений</item>
+        <item quantity="other">%d сообщения</item>
+        <item quantity="few">%d сообщения</item>
+    </plurals>
+</resources>

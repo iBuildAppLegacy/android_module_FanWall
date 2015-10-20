@@ -1,0 +1,214 @@
+<html> 
+<head> 
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> 
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/> 
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/infobox/1.1.9/src/infobox_packed.js"></script> 
+
+<style type="text/css">
+   html {
+   	height:100%;
+   }
+   
+   body {
+   	height:100%;
+   	margin:0px;
+   	padding:0px;
+   	overflow:hidden;
+   	}
+   	
+   .infoBox {
+	position: relative;
+	background: #0d1214;
+	border: 2px solid #2c3131;
+	border-radius: 6px;
+	color:#fff;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+	background: -moz-linear-gradient(top,  rgba(13,18,20,0.35) 0%, rgba(13,18,20,0.85) 35%, rgba(13,18,20,0.85) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(13,18,20,0.35)), color-stop(35%,rgba(13,18,20,0.85)), color-stop(100%,rgba(13,18,20,0.85))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(13,18,20,0.35) 0%,rgba(13,18,20,0.85) 35%,rgba(13,18,20,0.85) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(13,18,20,0.35) 0%,rgba(13,18,20,0.85) 35%,rgba(13,18,20,0.85) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(13,18,20,0.35) 0%,rgba(13,18,20,0.85) 35%,rgba(13,18,20,0.85) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(13,18,20,0.35) 0%,rgba(13,18,20,0.85) 35%,rgba(13,18,20,0.85) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#590d1214', endColorstr='#d90d1214',GradientType=0 ); /* IE6-9 */
+	border-bottom: 0px;
+	}
+	
+   .infoBox:after, .infoBox:before {
+	top: 100.7%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	opacity:0.6;
+    }
+
+   .infoBox:after {
+	border-color: rgba(13, 18, 20, 0);
+	border-top-color: #0d1214;
+	border-width: 30px;
+	left: 50%;
+	margin-left: -30px;
+    }
+
+   .infoBox:before {
+	border-color: rgba(13, 18, 20, 0);
+	border-top-color: #0d1214;
+	border-width: 33px;
+	left: 50%;
+	margin-left: -33px;
+    }
+ 
+   .info-window {
+	position:relative;
+	}
+ 
+   .info-window a {
+	float: right;
+	margin-left: 5px;
+	margin-right: -6px;
+	margin-top: 2px;
+   }
+ 
+   .info-window h1 {
+	margin:0px;
+	font-family:arial;
+	font-size:18px;
+	width: 230px;
+	overflow: hidden;
+   }
+ 
+   .info-window p {
+	font-family: arial;
+	font-size: 14px;
+	margin: 4px 0;
+   }      
+</style>
+
+<script type="text/javascript"> 
+
+// <<< JS - ObjectiveC Bridge
+	var jsBridge = {
+	  call : function call(functionName, args, name) {
+	        var iframe = document.createElement("IFRAME");
+	        iframe.setAttribute("src", functionName + ":" + encodeURIComponent(JSON.stringify(args)) + ":" + encodeURIComponent(JSON.stringify(name)));
+	        document.documentElement.appendChild(iframe);
+	        iframe.parentNode.removeChild(iframe);
+	        iframe = null;
+	  }
+	};
+
+	function goToURL(URLToGo, PointName) {
+    jsBridge.call("goToURL", URLToGo, PointName);
+}
+// JS - ObjectiveC Bridge >>>
+
+   var myMap = {
+      map: null,
+      infoWindow: null,
+      points: [],
+      markers: [],
+      info: []
+   };
+
+//Координаты точек
+__RePlAcE-Points__
+
+myMap.closeInfoWindow = function() {
+    myMap.infoWindow.close();
+};
+
+myMap.openInfoWindow = function(n) {
+    myMap.closeInfoWindow();
+    var boxText = document.createElement("div");
+    boxText.style.cssText = "margin: 0 8px; padding: 5px;";
+    boxText.innerHTML = myMap.info[n];
+
+    var myOptions = {
+        content: boxText
+        ,disableAutoPan: false
+        ,maxWidth: 0
+ 		,alignBottom: true
+        ,pixelOffset: new google.maps.Size(-142, -67)
+        ,zIndex: null
+        ,boxStyle: {
+            opacity: 1
+            ,width: "280px"
+        }
+        ,closeBoxMargin: "10px 10px 2px 2px"
+        ,closeBoxURL: ""
+        ,infoBoxClearance: new google.maps.Size(1, 1)
+        ,isHidden: false
+        ,pane: "floatPane"
+        ,enableEventPropagation: false
+    };
+
+    myMap.infoWindow = new InfoBox(myOptions);
+    myMap.infoWindow.open(myMap.map, myMap.markers[n]);
+};
+
+
+myMap.init = function() {
+    myMap.infoWindow = new google.maps.InfoWindow();
+
+//Координаты центра    
+    var latlng = new google.maps.LatLng(__RePlAcE-Lat__, __RePlAcE-Lng__);
+
+//Зум карты
+    var options = {zoom: __RePlAcE-Zoom__, center: latlng, mapTypeId: google.maps.MapTypeId.ROADMAP};
+    myMap.map = new google.maps.Map(document.getElementById("map_canvas"), options);
+
+    for(var i = 0; i < myMap.points.length; i++) {
+        var n = myMap.points.length - i;
+        var location = new google.maps.LatLng(myMap.points[i].latitude, myMap.points[i].longitude);
+        if(myMap.points[i].icon != undefined){
+/*         	alert('!!!!!!'); */
+			var image = new google.maps.MarkerImage('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAOxJREFUeNrM1msOwiAMAGBG8R7eZPG3d5Jsd/A+ejKlyhYkPAoti01I9iB8YymFab6flIub+saqxsQ+vvE3S/ByHYDt42vXIHi5BF8jjqEF5ys8PDz7hxfXXq49hTH8cxZBvJFGk9hnih6URLNYDEqgRSwFctAqtmVpKmy0PIAwO6hhGKYwgM1cs/pPvtIcFlodHJqxzroqkhFa1ENnCI3Zy55ha/aywS7ob7O0NRur/Y1gNpL6a+pO3Zi92ZNDarcgVf1EkHaZGOzFyGgIcjESuoFSWBVFUBoropq6UzMq0s/JwXBrY2vtfQswAAN9USqER3YZAAAAAElFTkSuQmCC',
+      // This marker is 20 pixels wide by 32 pixels tall.
+    		new google.maps.Size(28, 28),
+      // The origin for this image is 0,0.
+      		new google.maps.Point(0,0),
+      // The anchor for this image is the base of the flagpole at 0,32.
+      		new google.maps.Point(14,14));
+	    	myMap.markers[n] = new google.maps.Marker({position: location, map: myMap.map, zIndex:n, icon:image});
+        }else{
+        	myMap.markers[n] = new google.maps.Marker({position: location, map: myMap.map, zIndex:n});
+        }
+        myMap.markers[n].setTitle(myMap.points[i].point);
+
+        var info = '';
+        if(myMap.points[i].url){
+            info = '<div class="info-window">'+
+                    '<a href="#" onclick="goToURL(\''+myMap.points[i].url+'\', \''+myMap.points[i].point.replace(/\'/g, "\\'")+'\'); return FALSE;"><img src="http://ibuildapp.com/media/img/googlemap-url.png" alt="&gt;" /></a>'+
+                    '<h1>'+myMap.points[i].point+'</h1>'+
+                    '<p>'+myMap.points[i].details+'</p>'+
+                    '</div>';
+        } else {
+            info = '<div class="info-window">'+
+                    '<h1>'+myMap.points[i].point+'</h1>'+
+                    '<p>'+myMap.points[i].details+'</p>'+
+                    '</div>';
+        }
+
+        myMap.info[n] = info;
+		if(myMap.points[i].icon == undefined){
+		
+		        google.maps.event.addListener(myMap.markers[n], 'click', function(){
+		            myMap.openInfoWindow(this.getZIndex());
+		
+		        });
+		}
+        google.maps.event.addListener(myMap.map, 'click', function(){
+            myMap.closeInfoWindow();
+        });
+
+    }
+};
+</script> 
+</head> 
+<body style="margin:0px; padding:0px;" onload="myMap.init()"> 
+  <div id="map_canvas" style="width:100%; height:100%"></div> 
+</body> 
+</html> 

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_login_with_facebook_upper">Login with Facebook</string>
+    <string name="common_login_with_twitter_upper">Login with Twitter</string>
+    <string name="common__login_with_ibuildapp_upper">Login with iBuildApp</string>
+    <string name="common_login_with_email_upper">Login with Email</string>
+    <string name="common_cancel_upper">Cancel</string>
+    <string name="common_password_upper">Password</string>
+    <string name="common_log_in_upper">Login</string>
+    <string name="common_email_upper">Email</string>
+    <string name="common_loading_upper">Loading...</string>
+    <string name="common_yes_upper">Yes</string>
+    <string name="common_no_upper">No</string>
+
+    <string name="alert_no_internet">Cellular Data is Turned off. Turn on cellular data or use Wi-Fi to access data
+    </string>
+    <string name="alert_twitter_auth_error">Twitter authorization failed</string>
+    <string name="alert_facebook_auth_error">Facebook authorization failed</string>
+    <string name="alert_email_auth_error">Email authorization failed</string>
+    <string name="alert_invalid_email">Invalid email</string>
+    <string name="alert_registration_email_inuse">This email is in use. Please use another email</string>
+    <string name="alert_cannot_init">Cannot initialize plugin</string>
+
+
+    <!-- FanWall -->
+    <string name="fanwall_map">Mapa</string>
+    <string name="common_post_upper">Post</string>
+    <string name="romanblack_fanwall_camera_upper">Camera</string>
+    <string name="romanblack_fanwall_gallery_upper">Gallery</string>
+    <string name="romanblack_fanwall_from">from</string>
+    <string name="romanblack_fanwall_or">or</string>
+    <string name="romanblack_fanwall_map_point">author</string>
+
+    <string name="romanblack_fanwall_have_an_account">I have an account</string>
+    <string name="romanblack_fanwall_sign_up">Create new account</string>
+    <string name="romanblack_fanwall_posted_by">posted by</string>
+
+    <string name="romanblack_twitter_ptr_tap">Tap to refresh...</string>
+    <string name="romanblack_twitter_ptr_release">Release to refresh...</string>
+    <string name="romanblack_twitter_ptr_pull">Pull to refresh...</string>
+
+    <string name="romanblack_fanwall_alert_failed_to_login">Failed to login.</string>
+    <string name="romanblack_fanwall_alert_cannot_init_camera">Cannot initialize camera.</string>
+    <string name="romanblack_fanwall_alert_take_pic_before_sharing">You must take a picture before sharing.</string>
+    <string name="romanblack_fanwall_alert_no_camera">Yuor device have no camera.</string>
+    <string name="romanblack_fanwall_alert_camera_error">Camera error! Please try again.</string>
+    <string name="romanblack_fanwall_alert_pic_sent">Thank you! Your picture has been sent.</string>
+    <string name="romanblack_fanwall_alert_cant_load_comments">Cannot load comments.</string>
+    <string name="romanblack_fanwall_alert_cant_view_profile">Cannot view this profile</string>
+    <string name="romanblack_fanwall_alert_cant_select_image">This image cannot be selected</string>
+    <string name="romanblack_fanwall_alert_big_text"><![CDATA[Text lenght must be < 150 characters]]></string>
+    <string name="romanblack_fanwall_alert_empty_message">Cannot send empty comment</string>
+    <string name="romanblack_fanwall_wrong_auth_pass_login">Wrong fields content</string>
+    <string name="romanblack_fanwall_gallery">Gallery</string>
+    <string name="directoryplugin_email_found_this">I just found this in the</string>
+    <string name="directoryplugin_email_download_this">Download the</string>
+    <string name="directoryplugin_email_android_iphone_app">iPhone/Android app</string>
+    <string name="directoryplugin_email_posted_via">Posted via</string>
+    <string name="directoryplugin_twitter_posted_success">The picture has been posted to your Twitter wall</string>
+    <string name="directoryplugin_facebook_posted_success">The picture has been posted to your Facebook wall</string>
+    <string name="directoryplugin_twitter_posted_error">The picture hasn\'t been posted to your Twitter wall</string>
+    <string name="directoryplugin_facebook_posted_error">The picture hasn\'t been posted to your Facebook wall</string>
+
+    <string name="romanblack_fanwall_dialog_save_image">Are you sure you want to save current image?</string>
+    <string name="wall">Mural</string>
+    <string name="map">Mapa</string>
+    <string name="fanwall_photos">Fotos</string>
+    <string name="no_messages_yet">No messages yet</string>
+    <string name="Click_the_button_below_to_create_one">Click the button below to create one.</string>
+    <string name="send_message">Send message</string>
+    <string name="or">or</string>
+    <string name="sign_up">Sign up</string>
+    <string name="login">Login</string>
+    <string name="fanwall_log_in_upper">Login</string>
+    <string name="TermOfUse">By clicking on checkbox you are indicating that you have read and agree to the Terms of
+        Use.
+    </string>
+    <string name="TextView">TextView</string>
+    <string name="replies">Replies</string>
+    <string name="there_are_no_comments">Não Há comentários.</string>
+    <string name="post_your_comment">Post your comment!</string>
+    <string name="post_a_reply">Enviar um comentário</string>
+    <string name="there_are_no_messages">There are no messages yet.</string>
+    <string name="signup">Sign up</string>
+    <string name="profile">Perfil</string>
+    <string name="last_message">Last message:</string>
+    <string name="posts">Postagens</string>
+    <string name="comments">Comentários</string>
+    <string name="tap_to_refresh">Tap to refresh...</string>
+    <string name="remove_photo">Remove Photo</string>
+    <string name="picture">Picture</string>
+    <string name="zero_div_150">0/150</string>
+    <string name="home">Início</string>
+    <string name="back">Voltar</string>
+    <string name="recent">Recente</string>
+    <string name="nearme">Perto de mim</string>
+    <string name="cancel">Cancelar</string>
+    <string name="send">Enviar</string>
+
+    <plurals name="numberOfComments">
+        <item quantity="zero">%d comments</item>
+        <item quantity="one">%d comment</item>
+        <item quantity="few">%d comments</item>
+        <item quantity="many">%d comments</item>
+        <item quantity="other">%d comments</item>
+    </plurals>
+
+    <plurals name="numberOfMessages">
+        <item quantity="zero">%d posts</item>
+        <item quantity="one">%d post</item>
+        <item quantity="many">%d posts</item>
+        <item quantity="other">%d posts</item>
+        <item quantity="few">%d posts</item>
+    </plurals>
+
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <LinearLayout android:layout_height="50dp"
+                  android:layout_width="fill_parent"
+                  android:orientation="horizontal"
+                  android:background="@drawable/sergeyb_directoryplugin_action_bar_bg"
+                  android:gravity="center_vertical"
+                  android:paddingLeft="5dp"
+                  android:paddingRight="5dp"
+                  android:paddingBottom="10dp"
+                  android:paddingTop="10dp">
+
+        <LinearLayout android:layout_height="30dp"
+                      android:layout_width="50dp"
+                      android:orientation="horizontal"
+                      android:id="@+id/sergeyb_directoryplugin_sharing_home"
+                      android:background="@drawable/sergeyb_directoryplugin_iphone_button"
+                      android:gravity="center_vertical|center_horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/common_home_upper"
+                    android:textStyle="bold" android:textColor="#FFFFFF"
+                    android:textSize="12dp"/>
+        </LinearLayout>
+
+        <TextView android:id="@+id/sergeyb_directoryplugin_sharing_label"
+                  android:layout_height="fill_parent"
+                  android:layout_width="wrap_content"
+                  android:layout_weight="1"
+                  android:textColor="#ffffff"
+                  android:textSize="20dp"
+                  android:textStyle="bold"
+                  android:gravity="center"
+                  android:paddingLeft="5dp"
+                  android:visibility="invisible"/>
+
+        <LinearLayout android:layout_height="30dp"
+                      android:layout_width="wrap_content"
+                      android:orientation="horizontal"
+                      android:id="@+id/sergeyb_directoryplugin_sharing_post"
+                      android:background="@drawable/sergeyb_directoryplugin_iphone_button_blue"
+                      android:gravity="center_vertical|center_horizontal"
+                      android:paddingLeft="5dp" android:paddingRight="3dp">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/common_post_upper"
+                    android:textStyle="bold" android:textColor="#FFFFFF"
+                    android:textSize="12dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:orientation="horizontal"
+                  android:padding="5dp">
+
+        <EditText android:id="@+id/sergeyb_directoryplugin_sharing_edittext"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:gravity="top"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/gallery_main"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:background="#000">
+
+    <HorizontalScrollView android:id="@+id/romanblack_fanwall_images_scrollview"
+                          android:layout_width="fill_parent"
+                          android:layout_height="fill_parent">
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="fill_parent"
+                      android:orientation="horizontal"
+                      android:id="@+id/romanblack_fanwall_images_gallery_linearlayout">
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+        <com.ibuildapp.romanblack.FanWallPlugin.view.ImagesBottomPanel
+                android:id="@+id/romanblack_fanwall_image_description_panel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentBottom="false"
+                android:layout_above="@+id/romanblack_fanwall_images_bottom_panel">
+
+            <TextView android:text=""
+                      android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:layout_alignParentLeft="true"
+                      android:id="@+id/romanblack_fanwall_images_description"
+                      android:textColor="#FFF"
+                      android:padding="10dp"/>
+
+        </com.ibuildapp.romanblack.FanWallPlugin.view.ImagesBottomPanel>
+
+        <com.ibuildapp.romanblack.FanWallPlugin.view.ImagesBottomPanel
+                android:id="@+id/romanblack_fanwall_images_bottom_panel"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_alignParentBottom="true" android:gravity="center_vertical"
+                >
+
+            <TextView android:text="@string/TextView"
+                      android:layout_height="match_parent"
+                      android:layout_width="wrap_content"
+                      android:layout_alignParentLeft="true"
+                      android:layout_centerVertical="true"
+                      android:layout_marginLeft="5dp"
+                      android:id="@+id/romanblack_fanwall_gallery_image_title"
+                      android:textColor="#FFF" android:gravity="center_vertical"/>
+
+            <LinearLayout android:orientation="horizontal"
+                          android:layout_height="fill_parent"
+                          android:layout_centerVertical="true"
+                          android:layout_width="100dp"
+                          android:layout_marginRight="5dp"
+                          android:layout_alignParentRight="true"
+                          android:gravity="center_vertical|right">
+
+                <ImageView android:id="@+id/romanblack_fanwall_gallery_image_info"
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:src="@drawable/fanwall_icon_info" android:layout_marginLeft="3dp"
+                           android:layout_marginRight="5dp"/>
+
+                <ImageView android:id="@+id/romanblack_fanwall_gallery_btn_save_image"
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:src="@drawable/fanwall_icon_download" android:layout_marginLeft="3dp"
+                           android:layout_marginRight="3dp" android:layout_marginBottom="2dp"/>
+
+            </LinearLayout>
+
+        </com.ibuildapp.romanblack.FanWallPlugin.view.ImagesBottomPanel>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_height="wrap_content"
+              android:layout_width="fill_parent"
+              android:orientation="vertical" android:id="@+id/romanblack_fanwall_commentitem_root">
+
+    <LinearLayout android:layout_height="wrap_content"
+                  android:layout_width="fill_parent"
+                  android:orientation="horizontal"
+                  android:layout_marginLeft="10dp" android:layout_marginTop="5dp"
+                  android:layout_marginBottom="5dp">
+
+        <ImageView android:id="@+id/romanblack_fanwall_commentitem_avatar"
+                   android:layout_height="40dp"
+                   android:layout_width="40dp"
+                   android:src="@drawable/fanwall_avatar_placeholder"
+                />
+
+        <LinearLayout android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:layout_weight="1"
+                      android:orientation="vertical"
+                      android:layout_marginLeft="10dp">
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:layout_marginRight="10dp">
+                <TextView android:id="@+id/romanblack_fanwall_commentitem_name"
+                          android:layout_height="wrap_content"
+                          android:layout_width="wrap_content"
+                          android:lines="1"
+                          android:textColor="#ffffff"
+                          android:textSize="14dp"
+                          android:textStyle="bold" android:text="Sergey Brazhnik vot tak"
+                          android:singleLine="true"
+                        />
+                <TextView android:id="@+id/romanblack_fanwall_commentitem_date"
+                          android:layout_height="wrap_content"
+                          android:layout_width="wrap_content"
+                          android:lines="1" android:layout_marginLeft="5dp" android:textSize="13dp"
+                          android:text="1h" android:singleLine="true"/>
+            </LinearLayout>
+
+            <TextView android:id="@+id/romanblack_fanwall_commentitem_text"
+                      android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:textColor="#fdffff"
+                      android:textSize="14dp" android:layout_marginTop="3dp"
+                      android:text="Random-access memory (RAM) is a valuable resource in any software development environment"
+                      android:layout_marginRight="10dp"/>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp" android:gravity="center_horizontal"
+                    android:background="@drawable/fanwall_msg_shadow"
+                    android:id="@+id/romanblack_fanwall_messageitem_msgimage_holder"
+                    android:visibility="gone" android:layout_marginTop="5dp" android:layout_marginRight="10dp">
+                <ImageView android:id="@+id/romanblack_fanwall_messageitem_msgimage"
+                           android:layout_height="fill_parent"
+                           android:layout_width="fill_parent"
+                           android:scaleType="centerCrop" android:layout_marginLeft="7dp"
+                           android:layout_marginTop="6dp" android:layout_marginRight="7dp"
+                           android:layout_marginBottom="10dp"/>
+            </LinearLayout>
+
+            <!--<TextView android:id="@+id/romanblack_fanwall_commentitem_commentscount"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:textColor="@color/comments_blue" android:layout_marginTop="3dp"-->
+            <!--android:textSize="14dp" android:text="Add comment" android:layout_marginRight="10dp"/>-->
+            <LinearLayout android:layout_height="1px"
+                          android:layout_width="fill_parent"
+                          android:orientation="vertical"
+                          android:gravity="center"
+                          android:id="@+id/romanblack_fanwall_commentitem_separator"
+                          android:background="@color/white_20_trans" android:layout_marginTop="5dp">
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp" android:id="@+id/romanblack_fanwall_commentitem_last"
+            android:visibility="gone">
+    </LinearLayout>
+
+</LinearLayout>

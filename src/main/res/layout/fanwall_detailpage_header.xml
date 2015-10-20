@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:id="@+id/romanblack_fanwall_message_header_root"
+              android:focusableInTouchMode="false">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="1px" android:background="@color/white_20_trans">
+    </LinearLayout>
+    <RelativeLayout android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:orientation="vertical"
+                    android:padding="15dp" android:background="@color/black_20_trans"
+                    android:id="@+id/romanblack_fanwall_message_data_holder">
+
+        <ImageView android:id="@+id/romanblack_fanwall_message_avatar"
+                   android:layout_height="40dp"
+                   android:layout_width="40dp"
+                   android:src="@drawable/fanwall_avatar_placeholder"
+                   android:layout_marginRight="10dp"/>
+
+        <TextView android:id="@+id/romanblack_fanwall_message_name"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:lines="1"
+                  android:textColor="@color/white"
+                  android:textSize="16dp"
+                  android:textStyle="bold" android:layout_toRightOf="@+id/romanblack_fanwall_message_avatar"
+                  android:text="Sandra Smith"/>
+
+        <TextView android:id="@+id/romanblack_fanwall_message_date"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:lines="1" android:layout_toRightOf="@+id/romanblack_fanwall_message_avatar"
+                  android:layout_below="@+id/romanblack_fanwall_message_name" android:text="Aug, 10, 12:39"
+                  android:textColor="@color/white_30_trans" android:textSize="14dp"/>
+
+        <TextView android:id="@+id/romanblack_fanwall_message_text"
+                  android:layout_height="wrap_content"
+                  android:layout_width="fill_parent"
+                  android:textSize="17dp"
+                  android:textColor="@color/white" android:layout_below="@+id/romanblack_fanwall_message_avatar"
+                  android:text="Редизайн главной страницы и переделка flow - подготовка ресурсов и редизайн главной "
+                  android:layout_marginTop="7dp" android:layout_marginBottom="7dp"/>
+        <ImageView android:id="@+id/romanblack_fanwall_message_msgimage"
+                   android:layout_height="wrap_content"
+                   android:layout_width="fill_parent"
+                   android:background="#ffffff" android:layout_below="@+id/romanblack_fanwall_message_text"
+                   android:layout_centerHorizontal="true" android:visibility="gone" android:scaleType="centerCrop"
+                   android:adjustViewBounds="false"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="1px" android:background="@color/white_20_trans"
+            android:id="@+id/romanblack_fanwall_message_separator">
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp" android:gravity="center" android:background="@color/black_30_trans"
+            android:id="@+id/romanblack_fanwall_message_counter_holder">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/romanblack_fanwall_message_counter" android:textColor="@color/white"
+                android:textSize="14dp"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="1px" android:background="@color/white_20_trans"
+            android:id="@+id/romanblack_fanwall_message_separator" android:layout_marginBottom="5dp">
+    </LinearLayout>
+
+</LinearLayout>

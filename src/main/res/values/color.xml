@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="text_gray">#444444</color>
+
+    <color name="white_10_trans">#19ffffff</color>
+    <color name="white_20_trans">#33ffffff</color>
+    <color name="white_30_trans">#4cffffff</color>
+    <color name="white_40_trans">#66ffffff</color>
+    <color name="white_50_trans">#7fffffff</color>
+    <color name="white_80_trans">#ccffffff</color>
+    <color name="white_90_trans">#e5ffffff</color>
+
+
+    <color name="black_10_trans">#19000000</color>
+    <color name="black_20_trans">#33000000</color>
+    <color name="black_30_trans">#4c000000</color>
+    <color name="black_40_trans">#66000000</color>
+    <color name="black_50_trans">#7f000000</color>
+    <color name="black_80_trans">#cc000000</color>
+    <color name="black_90_trans">#e5000000</color>
+
+    <color name="message_my_background">#e9f4cd</color>
+    <!-- 50% trans black -->
+    <color name="comments_blue">#47a2ff</color>
+    <!-- 50% trans black -->
+
+
+</resources>

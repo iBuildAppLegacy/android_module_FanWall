@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_height="wrap_content"
+              android:layout_width="fill_parent"
+              android:orientation="vertical">
+
+    <LinearLayout android:layout_height="wrap_content"
+                  android:layout_width="fill_parent"
+                  android:orientation="horizontal"
+                  android:paddingTop="6dp"
+                  android:paddingLeft="8dp"
+                  android:paddingRight="8dp">
+
+        <ImageView android:id="@+id/romanblack_fanwall_commentitem_avatar"
+                   android:layout_height="25dp"
+                   android:layout_width="25dp"
+                   android:src="@drawable/fanwall_avatar_placeholder"/>
+
+        <LinearLayout android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:layout_weight="1"
+                      android:orientation="vertical"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="3dp">
+
+            <TextView android:id="@+id/romanblack_fanwall_commentitem_name"
+                      android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:lines="1"
+                      android:textColor="#363b41"
+                      android:textSize="17dp"
+                      android:textStyle="bold"/>
+
+            <ImageView android:id="@+id/romanblack_fanwall_commentitem_msgimage"
+                       android:layout_height="75dp"
+                       android:layout_width="75dp"
+                       android:padding="5dp"
+                       android:background="#ffffff"/>
+
+            <TextView android:id="@+id/romanblack_fanwall_commentitem_text"
+                      android:layout_height="wrap_content"
+                      android:layout_width="fill_parent"
+                      android:textColor="#363b41"
+                      android:textSize="17dp"/>
+
+            <TextView android:id="@+id/romanblack_fanwall_commentitem_date"
+                      android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:lines="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/romanblack_fanwall_commentitem_commentscount_layout"
+                      android:layout_height="30dp"
+                      android:layout_width="30dp"
+                      android:orientation="vertical"
+                      android:gravity="center"
+                      android:background="@drawable/romanblack_fanwall_comments_counter"
+                      android:paddingLeft="2dp"
+                      android:paddingTop="1dp"
+                      android:paddingRight="1dp"
+                      android:paddingBottom="8dp">
+
+            <TextView android:id="@+id/romanblack_fanwall_commentitem_commentscount"
+                      android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:textColor="#ffffff"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_height="2dp"
+                  android:layout_width="fill_parent"
+                  android:orientation="vertical"
+                  android:gravity="center"
+                  android:background="@drawable/romanblack_fanwall_hor_divider" android:layout_marginTop="8dp"
+                  android:layout_marginBottom="8dp">
+    </LinearLayout>
+
+</LinearLayout>

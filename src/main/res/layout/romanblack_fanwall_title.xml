@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_height="50dp"
+              android:layout_width="200dp"
+              android:layout_weight="1"
+              android:orientation="horizontal"
+              android:gravity="center">
+
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="30dp"
+                  android:id="@+id/romanblack_fanwall_buttons_root"
+                  android:background="@drawable/sergeyb_fanwall_topbar_middle_buttons">
+        
+        <LinearLayout android:layout_height="fill_parent"
+                      android:layout_width="10dp"
+                      android:layout_weight="1"
+                      android:orientation="horizontal"
+                      android:gravity="center" 
+                      android:background="@drawable/romanblack_fanwall_tab_right"
+                      android:id="@+id/romanblack_fanwall_layout_nearme">
+            
+            <TextView android:id="@+id/romanblack_fanwall_main_recent"
+                      android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:src="@drawable/romanblack_fanwall_recent" 
+                      android:text="@string/recent"
+                      android:layout_gravity="center"
+                      android:singleLine="true"/>
+            
+        </LinearLayout>
+        
+        <LinearLayout android:layout_height="fill_parent"
+                      android:layout_width="10dp"
+                      android:layout_weight="1"
+                      android:orientation="horizontal"
+                      android:background="@drawable/romanblack_fanwall_tab_right_pressed"
+                      android:gravity="center" 
+                      android:id="@+id/romanblack_fanwall_layout_recent">
+            
+            <TextView android:id="@+id/romanblack_fanwall_main_nearme"
+                      android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:src="@drawable/romanblack_fanwall_near_me"
+                      android:text="@string/nearme"
+                      android:singleLine="true"/>
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

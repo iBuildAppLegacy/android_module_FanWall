@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:background="#ffffff">
+
+    <LinearLayout android:layout_height="50dp"
+                  android:layout_width="fill_parent"
+                  android:orientation="horizontal"
+                  android:background="@drawable/romanblack_fanwall_action_bar_bg"
+                  android:gravity="center_vertical"
+                  android:paddingLeft="5dp"
+                  android:paddingRight="5dp">
+
+        <LinearLayout android:layout_height="27dp"
+                      android:layout_width="wrap_content"
+                      android:orientation="horizontal"
+                      android:gravity="center_vertical"
+                      android:paddingRight="5dp"
+                      android:paddingLeft="5dp" android:background="@drawable/romanblack_fanwall_iphone_button">
+
+            <TextView android:id="@+id/romanblack_fanwall_main_home"
+                      android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:src="@drawable/romanblack_fanwall_home" android:autoText="false"
+                      android:text="@string/back"/>
+
+        </LinearLayout>
+
+        <TextView android:id="@+id/romanblack_fanwall_message_replies"
+                  android:text="@string/replies"
+                  android:layout_height="fill_parent"
+                  android:layout_width="wrap_content"
+                  android:layout_weight="1"
+                  android:textColor="#ffffff"
+                  android:textSize="20dp"
+                  android:textStyle="bold"
+                  android:gravity="center"/>
+
+        <ImageView android:id="@+id/romanblack_fanwall_message_voice"
+                   android:layout_height="50dp"
+                   android:layout_width="50dp"
+                   android:paddingLeft="18dp"
+                   android:src="@drawable/romanblack_fanwall_write_post"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_height="wrap_content"
+                  android:layout_width="fill_parent"
+                  android:orientation="vertical"
+                  android:background="#f3f3f3">
+
+        <LinearLayout android:layout_height="wrap_content"
+                      android:layout_width="fill_parent"
+                      android:orientation="horizontal"
+                      android:paddingTop="11dp"
+                      android:paddingLeft="19dp"
+                      android:paddingRight="11dp">
+
+            <ImageView android:id="@+id/romanblack_fanwall_message_avatar"
+                       android:layout_height="55dp"
+                       android:layout_width="55dp"
+                       android:layout_marginTop="10dp"
+                       android:src="@drawable/fanwall_avatar_placeholder"/>
+
+            <LinearLayout android:layout_height="wrap_content"
+                          android:layout_width="wrap_content"
+                          android:layout_weight="1"
+                          android:orientation="vertical"
+                          android:paddingLeft="10dp">
+
+                <TextView android:id="@+id/romanblack_fanwall_message_name"
+                          android:layout_height="wrap_content"
+                          android:layout_width="wrap_content"
+                          android:lines="1"
+                          android:textColor="#363b41"
+                          android:textSize="19dp"
+                          android:textStyle="bold"/>
+
+                <TextView android:id="@+id/romanblack_fanwall_message_date"
+                          android:layout_height="wrap_content"
+                          android:layout_width="wrap_content"
+                          android:lines="1"/>
+
+                <ImageView android:id="@+id/romanblack_fanwall_message_msgimage"
+                           android:layout_height="150dp"
+                           android:layout_width="150dp"
+                           android:padding="5dp"
+                           android:background="#ffffff"/>
+
+                <TextView android:id="@+id/romanblack_fanwall_message_text"
+                          android:layout_height="wrap_content"
+                          android:layout_width="fill_parent"
+                          android:textSize="17dp"
+                          android:textColor="#363b41"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout android:layout_width="fill_parent"
+                     android:layout_height="25dp">
+
+            <LinearLayout android:id="@+id/romanblack_fanwall_message_divider_arrow"
+                          android:layout_height="fill_parent"
+                          android:layout_width="fill_parent"
+                          android:orientation="vertical"
+                          android:background="@drawable/romanblack_fanwall_comment_corner">
+
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/romanblack_fanwall_message_divider"
+                          android:layout_height="fill_parent"
+                          android:layout_width="fill_parent"
+                          android:orientation="vertical"
+                          android:gravity="bottom">
+
+                <LinearLayout android:layout_height="4dp"
+                              android:layout_width="fill_parent"
+                              android:orientation="vertical"
+                              android:background="@drawable/romanblack_fanwall_divider_comments"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <FrameLayout android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1">
+
+        <LinearLayout android:id="@+id/romanblack_fanwall_message_nocommets_layout"
+                      android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      android:orientation="vertical"
+                      android:gravity="center_horizontal"
+                      android:background="#f3f3f3">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/there_are_no_comments"
+                      android:textColor="#ffffff"
+                      android:textSize="15dp"
+                      android:layout_marginTop="40dp"/>
+
+            <Button android:id="@+id/romanblack_fanwall_message_nocomments_button"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/post_your_comment"
+                    android:textColor="#000000"
+                    android:textSize="17dp"
+                    android:background="@drawable/romanblack_fanwall_btn_add_comment"/>
+
+        </LinearLayout>
+
+        <com.ibuildapp.romanblack.FanWallPlugin.view.MyScrollView
+                android:id="@+id/romanblack_fanwall_message_scrollview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#f3f3f3">
+
+            <LinearLayout android:id="@+id/romanblack_fanwall_message_comments"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"/>
+
+        </com.ibuildapp.romanblack.FanWallPlugin.view.MyScrollView>
+
+    </FrameLayout>
+
+</LinearLayout>
