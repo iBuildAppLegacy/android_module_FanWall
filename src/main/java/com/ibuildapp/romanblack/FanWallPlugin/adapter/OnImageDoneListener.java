@@ -26,5 +26,5 @@ public interface OnImageDoneListener {
      * @param image               - image bitmap
      * @param downloadedImagePath - downloaded image path
      */
-    public void onImageLoaded(int uid, ImageView imageHolder, String name, Bitmap image, String downloadedImagePath);
+    void onImageLoaded(int uid, ImageView imageHolder, String name, Bitmap image, String downloadedImagePath);
 }

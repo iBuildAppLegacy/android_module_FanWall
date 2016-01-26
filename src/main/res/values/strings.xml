@@ -101,6 +101,7 @@
     <string name="directoryplugin_facebook_posted_success">The picture has been posted to your Facebook wall</string>
     <string name="directoryplugin_twitter_posted_error">The picture hasn\'t been posted to your Twitter wall</string>
     <string name="directoryplugin_facebook_posted_error">The picture hasn\'t been posted to your Facebook wall</string>
+    <string name="fanwall_no_camera_permision">To use this function you need to switch ON Camera in application’s permissions</string>
 
     <plurals name="numberOfComments">
         <item quantity="zero">%d comments</item>

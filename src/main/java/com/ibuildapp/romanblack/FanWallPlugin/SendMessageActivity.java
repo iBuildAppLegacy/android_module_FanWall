@@ -34,26 +34,9 @@ import android.widget.*;
 import android.widget.TextView.OnEditorActionListener;
 import com.appbuilder.sdk.android.AppBuilderModuleMain;
 import com.appbuilder.sdk.android.Widget;
-import com.appbuilder.sdk.android.authorization.Authorization;
-import com.appbuilder.sdk.android.authorization.entities.User;
 import com.ibuildapp.romanblack.FanWallPlugin.data.FanWallMessage;
-import com.ibuildapp.romanblack.FanWallPlugin.data.JSONParser;
 import com.ibuildapp.romanblack.FanWallPlugin.data.Prefs;
 import com.ibuildapp.romanblack.FanWallPlugin.data.Statics;
-import org.apache.http.HttpVersion;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.mime.MultipartEntity;
-import org.apache.http.entity.mime.content.FileBody;
-import org.apache.http.entity.mime.content.StringBody;
-import org.apache.http.impl.client.BasicResponseHandler;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.CoreProtocolPNames;
-import org.apache.http.params.HttpParams;
-
-import java.io.File;
-import java.nio.charset.Charset;
 
 /**
  * This activity provides send comment functionality.

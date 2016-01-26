@@ -29,7 +29,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import java.util.Map;
-import java.util.Set;
 
 /**
  * @author Alejandro Rodriguez <https://github.com/Alexrs95/Prefs>

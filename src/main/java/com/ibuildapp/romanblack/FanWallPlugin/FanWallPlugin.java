@@ -10,11 +10,13 @@
  ****************************************************************************/
 package com.ibuildapp.romanblack.FanWallPlugin;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.app.Service;
 import android.content.*;
 import android.content.DialogInterface.OnCancelListener;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.*;
@@ -26,6 +28,8 @@ import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.*;
 import android.provider.MediaStore;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.text.*;
 import android.util.Log;
 import android.view.*;
@@ -1063,6 +1067,13 @@ public class FanWallPlugin extends AppBuilderModuleMain implements OnCancelListe
                     android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
             startActivityForResult(i, PICK_IMAGE_ACTIVITY);
         } else if (id == R.id.romanblack_fanwall_make_photo) {
+            /*if (android.os.Build.VERSION.SDK_INT >= 23) {
+                int res = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
+                if (res != PackageManager.PERMISSION_GRANTED){
+                    Toast.makeText(this,R.string.fanwall_no_camera_permision, Toast.LENGTH_LONG).show();
+                    return;
+                }
+            }*/
             Intent it = new Intent(FanWallPlugin.this, CameraActivity.class);
             it.putExtra("Widget", widget);
             startActivityForResult(it, TAKE_A_PICTURE_ACTIVITY);
@@ -1173,7 +1184,7 @@ public class FanWallPlugin extends AppBuilderModuleMain implements OnCancelListe
                                 }
                             }
                         })
-                        .setFlaggingClickListener(new DialogSharing.Item.OnClickListener() {
+/*                        .setFlaggingClickListener(new DialogSharing.Item.OnClickListener() {
                             @Override
                             public void onClick() {
                                 // checking Internet connection
@@ -1234,7 +1245,7 @@ public class FanWallPlugin extends AppBuilderModuleMain implements OnCancelListe
 
                                 }
                             }
-                        })
+                        })*/
                         .build()
         );
     }

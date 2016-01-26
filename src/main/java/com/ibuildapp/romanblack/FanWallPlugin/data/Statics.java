@@ -23,12 +23,14 @@ import com.ibuildapp.romanblack.FanWallPlugin.R;
 import com.ibuildapp.romanblack.FanWallPlugin.callback.OnAuthListener;
 import org.apache.http.HttpVersion;
 import org.apache.http.NameValuePair;
+
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.mime.MultipartEntity;
 import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.entity.mime.content.StringBody;
+
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
@@ -36,8 +38,6 @@ import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.CoreProtocolPNames;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.*;
@@ -45,6 +45,7 @@ import java.net.*;
 import java.nio.charset.Charset;
 import java.text.SimpleDateFormat;
 import java.util.*;
+
 
 /**
  * This class contains global module variables.
@@ -75,7 +76,7 @@ public class Statics {
     public static boolean isSchemaDark = false;
 
     /* Color Scheme ends */
-    public static final String BASE_URL = "http://" + com.appbuilder.sdk.android.Statics.BASE_DOMEN + "/mdscr/fanwall";
+    public static final String BASE_URL = com.appbuilder.sdk.android.Statics.BASE_DOMEN + "/mdscr/fanwall";
     public static String APP_ID = "0";
     public static String MODULE_ID = "0";
     public static Location currentLocation = null;
@@ -618,7 +619,7 @@ public class Statics {
 
     public static IncrementSharingStatus incrementSharing( String postId )
     {
-        String loginUrl = "http://" + com.appbuilder.sdk.android.Statics.BASE_DOMEN + "/modules/fanwall/sharing_increment";
+        String loginUrl = com.appbuilder.sdk.android.Statics.BASE_DOMEN + "/modules/fanwall/sharing_increment";
         Log.e(TAG, "incrementSharing url = " + loginUrl);
 
 

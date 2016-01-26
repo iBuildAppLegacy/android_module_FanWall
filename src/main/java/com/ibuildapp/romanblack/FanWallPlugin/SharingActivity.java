@@ -193,16 +193,16 @@ public class SharingActivity extends AppBuilderModule implements
                                     Statics.BASE_DOMEN,
                                     com.ibuildapp.romanblack.FanWallPlugin.data.Statics.APP_ID);
 
-                            String adPart = String.format(downloadThe + " %s " + androidIphoneApp + ": %s\n%s",
+                            String adPart = ""; /*String.format(downloadThe + " %s " + androidIphoneApp + ": %s\n%s",
                                     com.ibuildapp.romanblack.FanWallPlugin.data.Statics.appName,
                                     downloadAppUrl,
-                                    postedVia + " http://ibuildapp.com");
+                                    postedVia + " http://ibuildapp.com");*/
 
                             // content part
-                            String contentPath = String.format(foundThis + " %s: %s \n%s",
+                            String contentPath = ""; /* String.format(foundThis + " %s: %s \n%s",
                                     com.ibuildapp.romanblack.FanWallPlugin.data.Statics.appName,
                                     image_url,
-                                    com.ibuildapp.romanblack.FanWallPlugin.data.Statics.hasAd ? adPart : "");
+                                    com.ibuildapp.romanblack.FanWallPlugin.data.Statics.hasAd ? adPart : "");*/
 
                             message_text += "\n" + contentPath;
 

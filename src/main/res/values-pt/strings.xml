@@ -96,6 +96,7 @@
     <string name="nearme">Perto de mim</string>
     <string name="cancel">Cancelar</string>
     <string name="send">Enviar</string>
+    <string name="fanwall_no_camera_permision">To use this function you need to switch ON Camera in application’s permissions</string>
 
     <plurals name="numberOfComments">
         <item quantity="zero">%d comments</item>

@@ -11,7 +11,6 @@
 package com.ibuildapp.romanblack.FanWallPlugin.view;
 
 import android.content.Context;
-import android.graphics.*;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 

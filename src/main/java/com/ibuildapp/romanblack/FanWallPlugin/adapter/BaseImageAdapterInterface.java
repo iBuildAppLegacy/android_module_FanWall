@@ -24,10 +24,10 @@ public interface BaseImageAdapterInterface {
      * @param height      - image preview height
      * @param rounded     - round koeff
      */
-    public void addTask(ImageView imageHolder, int uid, String DUBUG_PRODUCT_NAME, String resPath, String cachePath, String url, int width, int height, int rounded);
+    void addTask(ImageView imageHolder, int uid, String DUBUG_PRODUCT_NAME, String resPath, String cachePath, String url, int width, int height, int rounded);
 
     /**
      * not in use now
      */
-    public void stopAllTasks();
+    void stopAllTasks();
 }

@@ -92,13 +92,13 @@ public class MyScrollView extends ScrollView {
          *
          * @param scrollPosition the scroll position of ScrollView
          */
-        public void onOverScrollTop(int scrollPosition);
+        void onOverScrollTop(int scrollPosition);
 
         /**
          * This method is invoked when ScrollView is overscrolled on bottom.
          *
          * @param scrollPosition the scroll position of ScrollView
          */
-        public void onOverScrollBottom(int scrollPosition);
+        void onOverScrollBottom(int scrollPosition);
     }
 }

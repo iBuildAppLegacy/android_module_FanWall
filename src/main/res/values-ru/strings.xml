@@ -131,6 +131,7 @@
     <string name="romanblack_twitter_date_hour_ago">ч</string>
     <string name="romanblack_twitter_date_days">д</string>
     <string name="twitter_date_format_item">d MMM</string>
+    <string name="fanwall_no_camera_permision">Чтобы использовать эту функцию вам необходимо включить камеру в разрешениях приложения.</string>
 
 
     <plurals name="numberOfComments">

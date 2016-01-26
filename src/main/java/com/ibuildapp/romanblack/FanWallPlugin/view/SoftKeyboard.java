@@ -9,10 +9,6 @@
 *                                                                           *
 ****************************************************************************/
 package com.ibuildapp.romanblack.FanWallPlugin.view;
-/*
- * Author: Felipe Herranz (felhr85@gmail.com)
- * Contributors: Francesco Verheye (verheye.francesco@gmail.com)
- */
 
 import android.os.Handler;
 import android.os.Message;
@@ -84,8 +80,8 @@ public class SoftKeyboard implements View.OnFocusChangeListener
 
     public interface SoftKeyboardChanged
     {
-        public void onSoftKeyboardHide();
-        public void onSoftKeyboardShow();
+        void onSoftKeyboardHide();
+        void onSoftKeyboardShow();
     }
 
     private int getLayoutCoordinates()

@@ -18,5 +18,5 @@ public interface OnAuthListener {
     /**
      * This callback is invoked when the user was logged in.
      */
-    public void onAuth();
+    void onAuth();
 }
