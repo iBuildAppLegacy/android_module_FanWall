@@ -421,13 +421,10 @@ public class FanWallPlugin extends AppBuilderModuleMain implements OnCancelListe
         photoChooser = (LinearLayout) findViewById(R.id.romanblack_fanwall_make_photo);
         photoChooser.setOnClickListener(this);
 
-
-
         postMsg = (LinearLayout) findViewById(R.id.romanblack_fanwall_send_post);
         postMsg.setOnClickListener(this);
         editMsg = (EditText) findViewById(R.id.romanblack_fanwall_edit_msg);
         editMsg.addTextChangedListener(FanWallPlugin.this);
-
 
         tabHolder = (LinearLayout) findViewById(R.id.romanblack_fanwall_tab_holder);
         tabHolder.setBackgroundColor(res.getColor(R.color.black_50_trans));
