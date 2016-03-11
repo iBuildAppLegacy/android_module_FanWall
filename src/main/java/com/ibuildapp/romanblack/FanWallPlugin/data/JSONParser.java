@@ -106,7 +106,7 @@ public class JSONParser {
     public static int getPostCommentsCount( long postId )
     {
         int totalCount = 0;
-        String url = String.format("http://%s/modules/fanwall/%s/%s/commentcnt/%d/",
+        String url = String.format("%s/modules/fanwall/%s/%s/commentcnt/%d/",
                 com.appbuilder.sdk.android.Statics.BASE_DOMEN,
                 Statics.APP_ID,
                 Statics.MODULE_ID,
