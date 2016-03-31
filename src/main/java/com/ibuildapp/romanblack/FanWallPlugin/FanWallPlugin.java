@@ -39,6 +39,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.*;
 import com.appbuilder.sdk.android.AppBuilderModuleMain;
 import com.appbuilder.sdk.android.DialogSharing;
+import com.appbuilder.sdk.android.StartUpActivity;
 import com.appbuilder.sdk.android.Utils;
 import com.appbuilder.sdk.android.Widget;
 import com.appbuilder.sdk.android.authorization.Authorization;
@@ -62,6 +63,7 @@ import java.util.Locale;
 /**
  * Main module class. Module entry point. Represents fan wall widget.
  */
+@StartUpActivity(moduleName = "FanWall")
 public class FanWallPlugin extends AppBuilderModuleMain implements OnCancelListener,
         View.OnClickListener, OnAuthListener, TextWatcher {
 
