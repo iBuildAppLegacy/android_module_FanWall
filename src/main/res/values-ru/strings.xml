@@ -132,6 +132,8 @@
     <string name="romanblack_twitter_date_days">д</string>
     <string name="twitter_date_format_item">d MMM</string>
     <string name="fanwall_no_camera_permision">Чтобы использовать эту функцию вам необходимо включить камеру в разрешениях приложения.</string>
+    <string name="notification_error_ssl_cert_invalid">У Вас возникла SSl ошибка. Желаете ли Вы продолжить?</string>
+    <string name="fw_continue">Продолжить</string>
 
 
     <plurals name="numberOfComments">

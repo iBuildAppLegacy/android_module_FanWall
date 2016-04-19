@@ -372,8 +372,23 @@ public class ImageViewActivity extends AppBuilderModuleMain implements OnTouchLi
                     }
 
                     @Override
-                    public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
-                        super.onReceivedSslError(view, handler, error);
+                    public void onReceivedSslError(WebView view, final SslErrorHandler handler, SslError error) {
+                        final AlertDialog.Builder builder = new AlertDialog.Builder(ImageViewActivity.this);
+                        builder.setMessage(R.string.notification_error_ssl_cert_invalid);
+                        builder.setPositiveButton(ImageViewActivity.this.getResources().getString(R.string.fw_continue), new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                handler.proceed();
+                            }
+                        });
+                        builder.setNegativeButton(ImageViewActivity.this.getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                handler.cancel();
+                            }
+                        });
+                        final AlertDialog dialog = builder.create();
+                        dialog.show();
                     }
                 });
                 webViews.add(webView);
