@@ -10,10 +10,14 @@
 ****************************************************************************/
 package com.ibuildapp.romanblack.FanWallPlugin;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.http.SslError;
 import android.util.Log;
 import android.view.View;
+import android.webkit.SslErrorHandler;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
@@ -64,6 +68,26 @@ public class FanWallMapActivity extends AppBuilderModuleMain {
         mapView.getSettings().setJavaScriptEnabled(true);
 //        mapView.getSettings().setPluginsEnabled(true);
         mapView.setWebViewClient(new WebViewClient() {
+
+            @Override
+            public void onReceivedSslError(WebView view, final SslErrorHandler handler, SslError error) {
+                final AlertDialog.Builder builder = new AlertDialog.Builder(FanWallMapActivity.this);
+                builder.setMessage(R.string.notification_error_ssl_cert_invalid);
+                builder.setPositiveButton(FanWallMapActivity.this.getResources().getString(R.string.fw_continue), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        handler.proceed();
+                    }
+                });
+                builder.setNegativeButton(FanWallMapActivity.this.getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        handler.cancel();
+                    }
+                });
+                final AlertDialog dialog = builder.create();
+                dialog.show();
+            }
 
             @Override
             public void onPageFinished(WebView view, String url) {

@@ -120,5 +120,4 @@
         <item quantity="other">%d posts</item>
         <item quantity="few">%d posts</item>
     </plurals>
-
 </resources>
