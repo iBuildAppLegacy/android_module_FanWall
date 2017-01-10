@@ -251,7 +251,7 @@ public class FanWallPlugin extends AppBuilderModuleMain implements OnCancelListe
         EntityParser parser = new EntityParser();
         try {
             if (TextUtils.isEmpty(widget.getPluginXmlData())) {
-                if (TextUtils.isEmpty(currentIntent.getStringExtra("WidgetFile"))) {
+                 if (widget.getPathToXmlFile().length() == 0) {
                     handler.sendEmptyMessageDelayed(INITIALIZATION_FAILED, 3000);
                     return;
                 }
@@ -260,7 +260,7 @@ public class FanWallPlugin extends AppBuilderModuleMain implements OnCancelListe
             if (!TextUtils.isEmpty(widget.getPluginXmlData())) {
                 parser.parse(widget.getPluginXmlData());
             } else {
-                String xmlData = readXmlFromFile(currentIntent.getStringExtra("WidgetFile"));
+                String xmlData = readXmlFromFile(widget.getPathToXmlFile());
                 parser.parse(xmlData);
             }
         } catch (Exception e) {
@@ -290,32 +290,6 @@ public class FanWallPlugin extends AppBuilderModuleMain implements OnCancelListe
             Statics.cachePath = tempCachePath + "/fanwall-" + widget.getOrder();
 
         Statics.onAuthListeners.add(this);
-
-
-        // register separate LocationManager.GPS_PROVIDER for register status change events
-        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        Statics.currentLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 2000,0, new LocationListener() {
-            @Override
-            public void onLocationChanged(Location location) {
-                Statics.currentLocation = location;
-            }
-
-            @Override
-            public void onStatusChanged(String s, int i, Bundle bundle) {}
-
-            @Override
-            public void onProviderEnabled(String s) {
-                Prefs.with(FanWallPlugin.this).save(Prefs.KEY_GPS, true);
-                enableGpsCheckbox.setChecked(true);
-            }
-
-            @Override
-            public void onProviderDisabled(String s) {
-                Prefs.with(FanWallPlugin.this).save(Prefs.KEY_GPS, false);
-                enableGpsCheckbox.setChecked(false);
-            }
-        });
     }
 
     @Override
