@@ -94,7 +94,7 @@
 
     <string name="send">Post</string>
     <string name="loading">Loading...</string>
-    <string name="fanwall_alert_wrong_credential">Please, feel out email and password forms</string>
+    <string name="fanwall_alert_wrong_credential">Please, fill out email and password forms</string>
     <string name="fanwall_image_successfully_loaded">The picture has been saved to your phone</string>
     <string name="fanwall_alert_no_gps">Turn on location services to allow app to determine your location</string>
     <string name="directoryplugin_twitter_posted_success">The picture has been posted to your Twitter wall</string>
