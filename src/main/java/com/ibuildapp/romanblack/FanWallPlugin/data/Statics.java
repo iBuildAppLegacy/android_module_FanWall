@@ -83,6 +83,7 @@ public class Statics {
     public static ArrayList<OnAuthListener> onAuthListeners = new ArrayList<OnAuthListener>();
     public static String cachePath;
     public static String FACEBOOK_APP_TOKEN = "";
+    public static String urlComment;
 
     /**
      * This happen when user authorized.
@@ -478,7 +479,21 @@ public class Statics {
         HttpClient httpClient = new DefaultHttpClient(params);
 
         try {
+
+            StringBuilder sb = new StringBuilder();
+            sb.append(Statics.BASE_URL);
+            sb.append("/");
+            urlComment = sb.toString();
+   /*         HttpPost httpPost;
+            if (urlComment.contains("http")) {
+                httpPost = new HttpPost(urlComment);
+            }
+            else {
+                urlComment="http://"+urlComment;
+                httpPost = new HttpPost(urlComment);
+            }*/
             HttpPost httpPost = new HttpPost(Statics.BASE_URL + "/");
+
 
             MultipartEntity multipartEntity = new MultipartEntity();
             multipartEntity.addPart("app_id", new StringBody(com.appbuilder.sdk.android.Statics.appId, Charset.forName("UTF-8")));
@@ -497,7 +512,7 @@ public class Statics {
                 multipartEntity.addPart("account_type", new StringBody("ibuildapp", Charset.forName("UTF-8")));
             }
             multipartEntity.addPart("account_id", new StringBody(Authorization.getAuthorizedUser().getAccountId(), Charset.forName("UTF-8")));
-            multipartEntity.addPart("user_name", new StringBody(Authorization.getAuthorizedUser().getUserName(), Charset.forName("UTF-8")));
+            multipartEntity.addPart("user_name", new StringBody(Authorization.getAuthorizedUser().getFullName(), Charset.forName("UTF-8")));
             multipartEntity.addPart("user_avatar", new StringBody(Authorization.getAuthorizedUser().getAvatarUrl(), Charset.forName("UTF-8")));
 
             if ( withGps )

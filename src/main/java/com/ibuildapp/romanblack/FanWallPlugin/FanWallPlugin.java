@@ -1019,7 +1019,7 @@ public class FanWallPlugin extends AppBuilderModuleMain implements OnCancelListe
                                     refreshMessages();
                                 else
                                     refreshTop();
-                            }
+                           }
                             handler.sendEmptyMessage(HIDE_PROGRESS_DIALOG);
                         }
                     }).start();
