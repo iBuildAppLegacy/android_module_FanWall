@@ -232,10 +232,10 @@ public class CameraActivity extends AppBuilderModuleMain {
                 handler.sendEmptyMessageDelayed(INITIALIZATION_FAILED, 100);
                 return;
             }
-            if (widget.getPluginXmlData().length() == 0) {
+        /*   if (widget.getPluginXmlData().length() == 0) {
                 handler.sendEmptyMessageDelayed(INITIALIZATION_FAILED, 100);
                 return;
-            }
+            }*/
 
             cachePath = widget.getCachePath() + "/fanwall-" + widget.getOrder();
 
@@ -262,7 +262,7 @@ public class CameraActivity extends AppBuilderModuleMain {
 
             preview = new CameraPreview(this, camera);
             previewLayout = (RelativeLayout) findViewById(R.id.romanblack_fanwall_camera_preview);
-            previewLayout.addView(preview, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.FILL_PARENT));
+            previewLayout.addView(preview, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)); //(FILL_PARENT)
 
             configureCamera();
 

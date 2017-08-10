@@ -362,6 +362,7 @@ public class FanWallPlugin extends AppBuilderModuleMain implements OnCancelListe
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if ( b )
                 {
+                     if (locationManager!=null) {
                     if ( !locationManager.isProviderEnabled( LocationManager.GPS_PROVIDER ) ) {
                         final AlertDialog.Builder builder = new AlertDialog.Builder(FanWallPlugin.this);
                         builder.setMessage(getString(R.string.enable_gps_msg))
@@ -379,7 +380,7 @@ public class FanWallPlugin extends AppBuilderModuleMain implements OnCancelListe
                                 });
                         final AlertDialog alert = builder.create();
                         alert.show();
-                    } else
+                    } } else
                     {
                         Prefs.with(FanWallPlugin.this).save(Prefs.KEY_GPS, true );
                     }
@@ -1117,6 +1118,7 @@ public class FanWallPlugin extends AppBuilderModuleMain implements OnCancelListe
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
+     //   return false;
         return false;
     }
 
