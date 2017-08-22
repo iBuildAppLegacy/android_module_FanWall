@@ -111,32 +111,33 @@ public class FanWallPhotoListActivity extends AppBuilderModuleMain implements Ad
                             + com.appbuilder.sdk.android.Statics.appToken);
 
                     loaded = true;
+                    if (Statics.cachePath!=null) {
+                        File cacheFile = new File(Statics.cachePath);
+                        if (!cacheFile.exists()) {
+                            cacheFile.mkdirs();
+                        }
 
-                    File cacheFile = new File(Statics.cachePath);
-                    if (!cacheFile.exists()) {
-                        cacheFile.mkdirs();
-                    }
+                        File cache = new File(Statics.cachePath + "/" + "ca-0-0-gal");
+                        if (cache.exists()) {
+                            cache.delete();
+                            try {
+                                cache.createNewFile();
+                            } catch (IOException iOEx) {
+                                Log.d(TAG, "can't create cache file");
+                            }
+                        }
 
-                    File cache = new File(Statics.cachePath + "/" + "ca-0-0-gal");
-                    if (cache.exists()) {
-                        cache.delete();
+
                         try {
-                            cache.createNewFile();
+                            FileOutputStream fos = new FileOutputStream(cache);
+                            ObjectOutputStream oos = new ObjectOutputStream(fos);
+                            oos.writeObject(galleryMessages);
+                            oos.close();
+                            fos.close();
                         } catch (IOException iOEx) {
-                            Log.d(TAG, "can't create cache file");
+                            Log.d(TAG, "can't write image to file");
                         }
                     }
-
-                    try {
-                        FileOutputStream fos = new FileOutputStream(cache);
-                        ObjectOutputStream oos = new ObjectOutputStream(fos);
-                        oos.writeObject(galleryMessages);
-                        oos.close();
-                        fos.close();
-                    } catch (IOException iOEx) {
-                        Log.d(TAG, "can't write image to file");
-                    }
-
                 }
 
                 if (!loaded) {

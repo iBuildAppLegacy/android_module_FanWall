@@ -28,9 +28,11 @@ public class MessagesDAO {
         this.cachePath = cachePath;
 
         // prepare cache folder
-        File cacheFolder = new File(cachePath);
-        if (!cacheFolder.exists()) {
-            cacheFolder.mkdirs();
+        if (cachePath!=null) {
+            File cacheFolder = new File(cachePath);
+            if (!cacheFolder.exists()) {
+                cacheFolder.mkdirs();
+            }
         }
     }
 

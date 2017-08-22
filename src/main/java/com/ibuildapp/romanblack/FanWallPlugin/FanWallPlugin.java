@@ -244,9 +244,15 @@ public class FanWallPlugin extends AppBuilderModuleMain implements OnCancelListe
         showProgress = AnimationUtils.loadAnimation(FanWallPlugin.this, R.anim.show_progress_anim);
         hideProgress = AnimationUtils.loadAnimation(FanWallPlugin.this, R.anim.hide_progress_anim);
 
-        currentIntent = getIntent();
-        widget = (Widget) currentIntent.getSerializableExtra("Widget");
+  /*      currentIntent = getIntent();
+        widget = (Widget) currentIntent.getSerializableExtra("Widget");*/
+        Intent currentIntent = getIntent();
+        Bundle store = currentIntent.getExtras();
+        widget = (Widget) store.getSerializable("Widget");
         String tempCachePath = widget.getCachePath();
+        if (tempCachePath.equals("")) {
+            tempCachePath = getExternalCacheDir().getAbsolutePath()+"/cache/";
+        }
 
         EntityParser parser = new EntityParser();
         try {
