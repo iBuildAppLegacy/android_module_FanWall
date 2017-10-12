@@ -28,6 +28,7 @@ import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.*;
 import android.provider.MediaStore;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.text.*;
@@ -105,6 +106,7 @@ public class FanWallPlugin extends AppBuilderModuleMain implements OnCancelListe
     private final int NO_GPS_SERVICE = 19;
     private final int LIST_PROGRESS_COMPLITE = 10011;
     private final int HANDLE_TAP_BAR = 10012;
+    private static final int CAMERA_REQUEST = 1008;
 
 
     //backend
@@ -1054,9 +1056,37 @@ public class FanWallPlugin extends AppBuilderModuleMain implements OnCancelListe
                     return;
                 }
             }*/
-            Intent it = new Intent(FanWallPlugin.this, CameraActivity.class);
-            it.putExtra("Widget", widget);
-            startActivityForResult(it, TAKE_A_PICTURE_ACTIVITY);
+            int permissionCheck = ContextCompat.checkSelfPermission(this,
+                    Manifest.permission.CAMERA);
+
+            if (permissionCheck!= PackageManager.PERMISSION_GRANTED)
+            {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.CAMERA},
+                        CAMERA_REQUEST);
+            } else {
+                Intent it = new Intent(FanWallPlugin.this, CameraActivity.class);
+                it.putExtra("Widget", widget);
+                startActivityForResult(it, TAKE_A_PICTURE_ACTIVITY);
+            }
+
+        }
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode) {
+            case CAMERA_REQUEST: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Intent it = new Intent(FanWallPlugin.this, CameraActivity.class);
+                    it.putExtra("Widget", widget);
+                    startActivityForResult(it, TAKE_A_PICTURE_ACTIVITY);
+                } else {
+                    finish();
+                }
+                return;
+            }
         }
     }
 
