@@ -512,7 +512,12 @@ public class Statics {
                 multipartEntity.addPart("account_type", new StringBody("ibuildapp", Charset.forName("UTF-8")));
             }
             multipartEntity.addPart("account_id", new StringBody(Authorization.getAuthorizedUser().getAccountId(), Charset.forName("UTF-8")));
-            multipartEntity.addPart("user_name", new StringBody(Authorization.getAuthorizedUser().getFullName(), Charset.forName("UTF-8")));
+
+            if (Authorization.getAuthorizedUser().getAccountType() == User.ACCOUNT_TYPES.TWITTER)
+                multipartEntity.addPart("user_name", new StringBody(Authorization.getAuthorizedUser().getUserName(), Charset.forName("UTF-8")));
+            else
+                multipartEntity.addPart("user_name", new StringBody(Authorization.getAuthorizedUser().getUserName(), Charset.forName("UTF-8")));
+
             multipartEntity.addPart("user_avatar", new StringBody(Authorization.getAuthorizedUser().getAvatarUrl(), Charset.forName("UTF-8")));
 
             if ( withGps )
