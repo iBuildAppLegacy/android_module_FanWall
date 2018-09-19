@@ -107,6 +107,7 @@ public class FanWallPlugin extends AppBuilderModuleMain implements OnCancelListe
     private final int LIST_PROGRESS_COMPLITE = 10011;
     private final int HANDLE_TAP_BAR = 10012;
     private static final int CAMERA_REQUEST = 1008;
+    private static final int STORAGE_REQUEST = 1009;
 
 
     //backend
@@ -1045,9 +1046,7 @@ public class FanWallPlugin extends AppBuilderModuleMain implements OnCancelListe
             else if (chooserHolder.getVisibility() == View.VISIBLE)
                 chooserHolder.setVisibility(View.GONE);
         } else if (id == R.id.romanblack_fanwall_gallery) {
-            Intent i = new Intent(Intent.ACTION_PICK,
-                    android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-            startActivityForResult(i, PICK_IMAGE_ACTIVITY);
+            requestReadPermissionAndProcess();
         } else if (id == R.id.romanblack_fanwall_make_photo) {
             /*if (android.os.Build.VERSION.SDK_INT >= 23) {
                 int res = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
@@ -1072,6 +1071,24 @@ public class FanWallPlugin extends AppBuilderModuleMain implements OnCancelListe
 
         }
     }
+
+    private void requestReadPermissionAndProcess() {
+        int permissionCheck = ContextCompat.checkSelfPermission(this,
+                Manifest.permission.CAMERA);
+
+        if (permissionCheck!= PackageManager.PERMISSION_GRANTED)
+        {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                    STORAGE_REQUEST);
+        } else {
+            Intent i = new Intent(Intent.ACTION_PICK,
+                    android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+            startActivityForResult(i, PICK_IMAGE_ACTIVITY);
+        }
+    }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         switch (requestCode) {
@@ -1087,6 +1104,15 @@ public class FanWallPlugin extends AppBuilderModuleMain implements OnCancelListe
                 }
                 return;
             }
+            case STORAGE_REQUEST:
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Intent i = new Intent(Intent.ACTION_PICK,
+                            android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+                    startActivityForResult(i, PICK_IMAGE_ACTIVITY);
+                }
+                return;
         }
     }
 
